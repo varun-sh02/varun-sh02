@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>varun-sh02 :: RUN.exe</title>
+<style>
+  :root{
+    --bg:#0d1117;
+    --grid:#161b22;
+    --accent:#39ff14;
+    --accent-dim:#1f9c0c;
+    --text:#c9d1d9;
+    --danger:#ff3b3b;
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    margin:0;padding:0;height:100%;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Courier New', ui-monospace, monospace;
+    overflow:hidden;
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
+  }
+  .scanlines{
+    position:fixed;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(
+      to bottom,
+      rgba(57,255,20,0.02) 0px,
+      rgba(57,255,20,0.02) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    z-index:5;
+  }
+  .wrap{
+    max-width:900px;
+    margin:0 auto;
+    padding:16px;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+  }
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:8px;
+    border-bottom:1px solid #21262d;
+    padding-bottom:10px;
+    margin-bottom:10px;
+  }
+  header h1{
+    font-size:clamp(14px,3.5vw,20px);
+    margin:0;
+    color:var(--accent);
+    letter-spacing:1px;
+  }
+  header h1 .prompt{color:var(--text);opacity:.6;}
+  .stats{
+    font-size:clamp(11px,3vw,14px);
+    display:flex;
+    gap:16px;
+  }
+  .stats span b{color:var(--accent);}
+  .game-shell{
+    position:relative;
+    flex:1;
+    min-height:0;
+    border:1px solid #21262d;
+    border-radius:6px;
+    background:
+      linear-gradient(var(--bg), var(--bg)) padding-box,
+      var(--bg);
+    overflow:hidden;
+  }
+  canvas{
+    display:block;
+    width:100%;
+    height:100%;
+  }
+  .overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:10px;
+    padding:20px;
+    background:rgba(13,17,23,0.85);
+    backdrop-filter:blur(2px);
+  }
+  .overlay.hidden{display:none;}
+  .overlay h2{
+    color:var(--accent);
+    margin:0;
+    font-size:clamp(16px,4vw,22px);
+    text-shadow:0 0 12px rgba(57,255,20,.5);
+  }
+  .overlay p{
+    margin:0;
+    font-size:clamp(11px,3vw,14px);
+    color:var(--text);
+    opacity:.8;
+    max-width:420px;
+    line-height:1.5;
+  }
+  .btn{
+    margin-top:6px;
+    background:transparent;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    font-family:inherit;
+    font-size:clamp(12px,3vw,14px);
+    padding:10px 22px;
+    border-radius:4px;
+    cursor:pointer;
+    letter-spacing:1px;
+    transition:background .15s, color .15s;
+  }
+  .btn:active{background:var(--accent);color:#000;}
+  @media (hover:hover){
+    .btn:hover{background:var(--accent);color:#000;}
+  }
+  footer{
+    padding-top:10px;
+    text-align:center;
+    font-size:11px;
+    opacity:.5;
+  }
+  footer a{color:var(--accent);text-decoration:none;}
+  .hint{
+    display:inline-block;
+    margin-top:4px;
+    font-size:10px;
+    opacity:.6;
+  }
+</style>
+</head>
+<body>
+<div class="scanlines"></div>
+<div class="wrap">
+  <header>
+    <h1><span class="prompt">~$</span> run --profile varun-sh02</h1>
+    <div class="stats">
+      <span>SCORE <b id="score">0</b></span>
+      <span>BEST <b id="best">0</b></span>
+    </div>
+  </header>
+
+  <div class="game-shell" id="shell">
+    <canvas id="game"></canvas>
+
+    <div class="overlay" id="startOverlay">
+      <h2>&gt; JUMP_THE_STACK.exe</h2>
+      <p>Dodge the merge conflicts. Every obstacle you clear is a bug you didn't ship to prod.</p>
+      <button class="btn" id="startBtn">PRESS START</button>
+      <span class="hint">SPACE / ↑ / TAP to jump &nbsp;·&nbsp; ↓ / SWIPE DOWN to duck</span>
+    </div>
+
+    <div class="overlay hidden" id="overOverlay">
+      <h2 id="overTitle">&gt; PROCESS TERMINATED</h2>
+      <p id="overText">You shipped a bug to production.</p>
+      <button class="btn" id="retryBtn">RESTART</button>
+      <span class="hint">SPACE / TAP to try again</span>
+    </div>
+  </div>
+
+  <footer>
+    built by <a href="https://linkedin.com/in/varun-shah-3a3b8a23b" target="_blank" rel="noopener">Varun Shah</a> — hire me if you rage-quit before beating your high score
+  </footer>
+</div>
+
+<script>
+(function(){
+  const canvas = document.getElementById('game');
+  const ctx = canvas.getContext('2d');
+  const shell = document.getElementById('shell');
+  const scoreEl = document.getElementById('score');
+  const bestEl = document.getElementById('best');
+  const startOverlay = document.getElementById('startOverlay');
+  const overOverlay = document.getElementById('overOverlay');
+  const overTitle = document.getElementById('overTitle');
+  const overText = document.getElementById('overText');
+  const startBtn = document.getElementById('startBtn');
+  const retryBtn = document.getElementById('retryBtn');
+
+  let dpr = Math.max(1, window.devicePixelRatio || 1);
+  let W, H, groundY;
+
+  function resize(){
+    const rect = shell.getBoundingClientRect();
+    W = rect.width;
+    H = rect.height;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    groundY = H * 0.75;
+  }
+  window.addEventListener('resize', resize);
+
+  const BEST_KEY = 'varun_run_best_score';
+  let best = parseInt(localStorage.getItem(BEST_KEY) || '0', 10) || 0;
+  bestEl.textContent = best;
+
+  // Both scale with current canvas height (H) so jump feel stays
+  // consistent across screen sizes. Tuned for a snappy ~0.5s hang time.
+  function jumpVelocity(){ return -1.9 * H; }   // px/s, upward (negative)
+  function gravityAccel(){ return 6.2 * H; }    // px/s^2, downward
+  const DUCK_SCALE = 0.55;
+
+  let player, obstacles, particles, speed, score, state, spawnTimer, elapsed;
+
+  function resetGame(){
+    resize();
+    player = {
+      x: W * 0.12,
+      y: groundY,
+      vy: 0,
+      w: H*0.09, h: H*0.16,
+      ducking:false,
+      onGround:true
+    };
+    obstacles = [];
+    particles = [];
+    speed = W * 0.28; // px per second, scales with width
+    score = 0;
+    spawnTimer = 0;
+    elapsed = 0;
+    state = 'ready';
+    scoreEl.textContent = '0';
+  }
+
+  function startGame(){
+    resetGame();
+    state = 'playing';
+    startOverlay.classList.add('hidden');
+    overOverlay.classList.add('hidden');
+    lastTime = performance.now();
+    requestAnimationFrame(loop);
+  }
+
+  function endGame(){
+    state = 'over';
+    const finalScore = Math.floor(score);
+    if(finalScore > best){
+      best = finalScore;
+      localStorage.setItem(BEST_KEY, String(best));
+      overTitle.textContent = '> NEW HIGH SCORE';
+      overText.textContent = 'Score ' + finalScore + ' — you just out-shipped yourself.';
+    } else {
+      overTitle.textContent = '> PROCESS TERMINATED';
+      overText.textContent = 'Score ' + finalScore + ' — a merge conflict got you. Best: ' + best;
+    }
+    bestEl.textContent = best;
+    overOverlay.classList.remove('hidden');
+  }
+
+  function jump(){
+    if(state === 'ready'){ startGame(); return; }
+    if(state === 'over'){ startGame(); return; }
+    if(player.onGround && !player.ducking){
+      player.vy = jumpVelocity();
+      player.onGround = false;
+    }
+  }
+  function duck(v){
+    if(state !== 'playing') return;
+    player.ducking = v && player.onGround;
+  }
+
+  // input
+  window.addEventListener('keydown', (e)=>{
+    if(e.code === 'Space' || e.code === 'ArrowUp'){ e.preventDefault(); jump(); }
+    if(e.code === 'ArrowDown'){ e.preventDefault(); duck(true); }
+  });
+  window.addEventListener('keyup', (e)=>{
+    if(e.code === 'ArrowDown'){ duck(false); }
+  });
+
+  let touchStartY = null;
+  shell.addEventListener('touchstart', (e)=>{
+    touchStartY = e.touches[0].clientY;
+  }, {passive:true});
+  shell.addEventListener('touchend', (e)=>{
+    if(touchStartY === null) return;
+    const endY = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0].clientY : touchStartY;
+    const dy = endY - touchStartY;
+    if(dy > 40){ /* swipe down: duck briefly handled via touchmove ideally, but tap fallback */ }
+    else { jump(); }
+    touchStartY = null;
+  }, {passive:true});
+  shell.addEventListener('mousedown', (e)=>{
+    if(e.target === startBtn || e.target === retryBtn) return;
+    jump();
+  });
+
+  startBtn.addEventListener('click', startGame);
+  retryBtn.addEventListener('click', startGame);
+
+  function spawnObstacle(){
+    const isBird = Math.random() < 0.28 && score > 8;
+    const size = H * (0.09 + Math.random()*0.05);
+    if(isBird){
+      obstacles.push({
+        type:'bird',
+        x: W + size,
+        y: groundY - size*1.6 - (Math.random()* H*0.12),
+        w: size*1.3, h: size*0.8,
+        wing:0
+      });
+    } else {
+      obstacles.push({
+        type:'bug',
+        x: W + size,
+        y: groundY,
+        w: size, h: size
+      });
+    }
+  }
+
+  let lastTime = 0;
+  function loop(t){
+    if(state !== 'playing'){ return; }
+    const dt = Math.min(0.035, (t - lastTime)/1000);
+    lastTime = t;
+    elapsed += dt;
+    update(dt);
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  function update(dt){
+    score += dt * 10;
+    scoreEl.textContent = Math.floor(score);
+    speed += dt * 6; // gradual difficulty ramp
+
+    // player physics
+    if(!player.onGround){
+      player.vy += gravityAccel() * dt;
+      player.y += player.vy * dt;
+      if(player.y >= groundY){
+        player.y = groundY;
+        player.vy = 0;
+        player.onGround = true;
+      }
+    }
+
+    // spawn
+    spawnTimer -= dt;
+    if(spawnTimer <= 0){
+      spawnObstacle();
+      const base = Math.max(0.55, 1.5 - elapsed*0.01);
+      spawnTimer = base + Math.random()*0.6;
+    }
+
+    // move obstacles
+    for(const o of obstacles){
+      o.x -= speed * dt;
+      if(o.type==='bird') o.wing += dt*12;
+    }
+    obstacles = obstacles.filter(o => o.x + o.w > -20);
+
+    // collisions
+    const pw = player.w;
+    const ph = player.ducking ? player.h*DUCK_SCALE : player.h;
+    const px = player.x;
+    const py = player.ducking ? player.y - ph : player.y - ph;
+
+    for(const o of obstacles){
+      const ow = o.w, oh = o.h;
+      const ox = o.x;
+      const oy = o.type==='bird' ? o.y : o.y - oh;
+      const overlap = px < ox+ow && px+pw > ox && py < oy+oh && py+ph > oy;
+      if(overlap){ endGame(); return; }
+    }
+  }
+
+  function drawGround(){
+    ctx.strokeStyle = '#21262d';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(0, groundY+2);
+    ctx.lineTo(W, groundY+2);
+    ctx.stroke();
+
+    // dashed moving ground detail
+    ctx.strokeStyle = '#1f9c0c55';
+    ctx.setLineDash([H*0.03, H*0.05]);
+    ctx.lineDashOffset = -(elapsed*speed*0.5) % (H*0.08);
+    ctx.beginPath();
+    ctx.moveTo(0, groundY+10);
+    ctx.lineTo(W, groundY+10);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  function drawPlayer(){
+    const ph = player.ducking ? player.h*DUCK_SCALE : player.h;
+    const y = player.y - ph;
+    ctx.save();
+    ctx.shadowColor = 'rgba(57,255,20,0.6)';
+    ctx.shadowBlur = 10;
+    ctx.fillStyle = '#39ff14';
+    ctx.fillRect(player.x, y, player.w, ph);
+    // "eye"
+    ctx.fillStyle = '#0d1117';
+    ctx.fillRect(player.x + player.w*0.6, y + ph*0.15, player.w*0.15, ph*0.15);
+    ctx.restore();
+  }
+
+  function drawObstacles(){
+    for(const o of obstacles){
+      ctx.save();
+      if(o.type === 'bug'){
+        ctx.fillStyle = '#ff3b3b';
+        ctx.shadowColor = 'rgba(255,59,59,0.5)';
+        ctx.shadowBlur = 8;
+        const y = o.y - o.h;
+        ctx.fillRect(o.x, y, o.w, o.h);
+        // little "legs"
+        ctx.strokeStyle = '#ff3b3b';
+        ctx.lineWidth = 2;
+        for(let i=0;i<3;i++){
+          ctx.beginPath();
+          ctx.moveTo(o.x + o.w*(0.15+i*0.35), y+o.h);
+          ctx.lineTo(o.x + o.w*(0.05+i*0.35), y+o.h+o.h*0.3);
+          ctx.stroke();
+        }
+      } else {
+        ctx.fillStyle = '#e0234e';
+        ctx.shadowColor = 'rgba(224,35,78,0.5)';
+        ctx.shadowBlur = 8;
+        const flap = Math.sin(o.wing) * o.h*0.3;
+        ctx.beginPath();
+        ctx.moveTo(o.x, o.y);
+        ctx.lineTo(o.x + o.w*0.5, o.y - flap - o.h*0.4);
+        ctx.lineTo(o.x + o.w, o.y);
+        ctx.lineTo(o.x + o.w*0.5, o.y + o.h*0.3);
+        ctx.closePath();
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    drawGround();
+    drawObstacles();
+    drawPlayer();
+  }
+
+  // init render (idle frame before start)
+  function idleDraw(){
+    resize();
+    ctx.clearRect(0,0,W,H);
+    groundY = H*0.75;
+    ctx.strokeStyle = '#21262d';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(0, groundY+2);
+    ctx.lineTo(W, groundY+2);
+    ctx.stroke();
+    ctx.fillStyle = '#39ff14';
+    ctx.shadowColor = 'rgba(57,255,20,0.6)';
+    ctx.shadowBlur = 10;
+    const w = H*0.09, h = H*0.16;
+    ctx.fillRect(W*0.12, groundY-h, w, h);
+  }
+
+  resetGame();
+  idleDraw();
+  window.addEventListener('resize', idleDraw);
+})();
+</script>
+</body>
+</html>
