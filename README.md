@@ -1,226 +1,307 @@
 <!-- ============================================================ -->
-<!-- BANNER -->
+<!-- TERMINAL BOOT SEQUENCE -->
 <!-- ============================================================ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,100:2C5364&height=220&section=header&text=Varun%20Shah&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Senior%20Full-Stack%20Engineer%20%7C%20React%20%2F%20Next.js%20%7C%20Node.js%20%2F%20NestJS&descAlignY=58&descSize=18" width="100%"/>
+  <img src="https://readme-typing-svg.demolab.com/?lines=%24+ssh+varun%40portfolio;Authenticating...+%E2%9C%93;Loading+character+sheet...+%E2%9C%93;Welcome+back%2C+Varun.&font=Fira+Code&center=true&width=600&height=45&duration=2200&pause=800&color=39FF14&background=0D1117&vCenter=true&size=20&repeat=true" />
 </p>
 
-<p align="center">
-  <a href="https://linkedin.com/in/varun-shah-3a3b8a23b">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Full-Stack+Engineer+%7C+5%2B+Years+Experience;React+%C2%B7+Next.js+%C2%B7+Node.js+%C2%B7+NestJS+%C2%B7+TypeScript;Headless+CMS+%C2%B7+Search+%C2%B7+Microservices;Open+to+Remote+%7C+US+Time-zone+Overlap&font=Fira+Code&center=true&width=650&height=40&duration=3000&pause=1000&color=2C5364&vCenter=true&size=22" alt="Typing SVG" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/📍-Ahmedabad,%20India-2C5364?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/🌍-Open%20to%20Remote-0F2027?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/📈-5%2B%20Years%20Experience-374151?style=for-the-badge"/>
-</p>
-
-<p align="center">
-  <a href="mailto:varunshah02@icloud.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-  <a href="https://linkedin.com/in/varun-shah-3a3b8a23b"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="tel:+918238960631"><img src="https://img.shields.io/badge/Phone-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
-</p>
+<h1 align="center">🎮 VARUN_SHAH.exe</h1>
+<h3 align="center">Full-Stack Engineer · Boss-Fighter of Legacy Codebases</h3>
 
 <br/>
 
 <!-- ============================================================ -->
-<!-- ABOUT -->
+<!-- CHARACTER SHEET -->
 <!-- ============================================================ -->
-## 🧭 About Me
+## 🧙 Character Sheet
 
-I'm a **Full-Stack Engineer** with **5+ years of experience** (freelance and full-time) designing,
-building, and scaling production web applications across the **MERN** and **NestJS** stacks. I specialize
-in **headless CMS integrations**, **high-performance search**, and **microservice architecture** — and
-I have a track record of turning slow legacy systems into fast, maintainable ones.
-
-```txt
-const varun = {
-  role: "Senior Full-Stack Engineer",
-  experience: "5+ years (freelance + full-time)",
-  stack: ["React", "Next.js", "Node.js", "NestJS", "TypeScript"],
-  specialties: ["Headless CMS", "Search (Algolia)", "Microservices", "System Design"],
-  currentFocus: "Storyblok + Next.js CMS integration for an enterprise video platform",
-  funFact: "Turns messy legacy codebases into fast, maintainable systems"
-};
+```yaml
+Class:        Full-Stack Engineer
+Guild:        Bacancy Technology Pvt. Ltd.
+Level:        5              # years in the field
+Alignment:    Ships-Clean-Code-Neutral
+Location:     Ahmedabad, India  [Remote Mode: ENABLED]
+Status:       ONLINE — accepting side quests (freelance) & full-time contracts
+Primary Weapon:  Next.js + TypeScript
+Secondary:       NestJS Microservices
+Passive Skill:   Turns legacy monoliths into 30%-faster apps while you sleep
 ```
 
-- 🔭 **Currently building:** a Storyblok + Next.js CMS integration with a fully dynamic, marketing-editable mega-menu system
-- 🧩 **Specialize in:** headless CMS (Storyblok, Contentful), high-performance search (Algolia), microservices & BFF architecture
-- 🏗️ **Led teams** through NestJS microservice architectures, code reviews, and clean-architecture standards
-- ⚡ **Measurable impact:** ~30% faster page loads · ~25% smaller bundles · ~40% faster DB queries
-- 🎓 **Education:** B.E. Information Technology, Gujarat Technological University (CGPA 8.65/10)
-- 💬 **Ask me about:** Next.js performance, headless CMS architecture, or scaling a monolith into services
+<table>
+<tr><td>
+
+**⚔️ Stat Sheet**
+
+![React](https://progress-bar.dev/90/?title=React&width=180&color=61DAFB)
+![Next.js](https://progress-bar.dev/92/?title=Next.js&width=180&color=000000)
+![Node.js](https://progress-bar.dev/88/?title=Node.js&width=180&color=339933)
+![NestJS](https://progress-bar.dev/85/?title=NestJS&width=180&color=E0234E)
+![TypeScript](https://progress-bar.dev/87/?title=TypeScript&width=180&color=3178C6)
+
+</td><td>
+
+**🧪 Utility Skills**
+
+![Storyblok/Contentful](https://progress-bar.dev/86/?title=Headless+CMS&width=180&color=09B3AF)
+![Algolia](https://progress-bar.dev/80/?title=Search+%28Algolia%29&width=180&color=5468FF)
+![MongoDB](https://progress-bar.dev/83/?title=MongoDB&width=180&color=47A248)
+![System Design](https://progress-bar.dev/82/?title=System+Design&width=180&color=F05032)
+![Docker](https://progress-bar.dev/75/?title=Docker&width=180&color=2496ED)
+
+</td></tr>
+</table>
 
 <br/>
 
 <!-- ============================================================ -->
-<!-- TECH STACK -->
+<!-- NEOFETCH STYLE INFO -->
 <!-- ============================================================ -->
-## 🛠️ Tech Stack
+## 💻 varun --fetch
 
-**Frontend**
-<p>
-<img src="https://skillicons.dev/icons?i=react,nextjs,ts,tailwind,html,css,js" />
-</p>
+```
+                    ___          varun@portfolio
+                   /  /\         ----------------
+                  /  /:/_        OS: Ahmedabad, India (Remote-Compatible)
+        ___      /  /:/ /\       Uptime: 5+ years in production
+       /  /\    /  /:/ /::\      Shell: React / Next.js / Node.js / NestJS
+      /  /:/   /  /:/ /:/\:\     Languages: TypeScript, JavaScript
+     /  /:/   /__/:/ /:/  \:\    DE: Headless CMS (Storyblok, Contentful)
+    /  /::\   \  \:\/:/__\/:/    WM: Microservices + Clean Architecture
+   /__/:/\:\   \  \::/~~~~       Terminal: VS Code + Warp
+   \__\/  \:\   \  \:\           CPU: Problem-Solving @ 100% utilization
+        \  \:\   \  \:\          GPU: Coffee-Accelerated Debugging
+         \__\/    \__\/          Memory: 5 companies, 0 regrets
+```
 
-**Backend**
-<p>
-<img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,graphql" />
-</p>
+<br/>
 
-**Databases**
-<p>
-<img src="https://skillicons.dev/icons?i=mongodb,mysql,redis" />
-</p>
+<!-- ============================================================ -->
+<!-- SKILL TREE (Mermaid renders natively on GitHub) -->
+<!-- ============================================================ -->
+## 🌳 Skill Tree
 
-**CMS, Search & Cloud**
-<p>
-<img src="https://skillicons.dev/icons?i=firebase,aws,docker,git,github,vscode,postman,figma" />
-</p>
+```mermaid
+graph TD
+    A[Varun Shah] --> B[Frontend Path]
+    A --> C[Backend Path]
+    A --> D[Architecture Path]
+
+    B --> B1[React.js]
+    B1 --> B2[Next.js SSR/ISR]
+    B2 --> B3[Headless CMS: Storyblok, Contentful]
+    B3 --> B4[⭐ Mega-Menu System — Boss Kill]
+
+    C --> C1[Node.js]
+    C1 --> C2[NestJS Microservices]
+    C2 --> C3[Backend-for-Frontend]
+    C3 --> C4[⭐ Document Signing Platform — Boss Kill]
+
+    D --> D1[System Design]
+    D1 --> D2[Clean Architecture]
+    D2 --> D3[Performance Tuning]
+    D3 --> D4[⭐ 40% Faster Queries — Boss Kill]
+
+    style A fill:#0F2027,stroke:#39FF14,color:#fff
+    style B4 fill:#E0234E,stroke:#fff,color:#fff
+    style C4 fill:#E0234E,stroke:#fff,color:#fff
+    style D4 fill:#E0234E,stroke:#fff,color:#fff
+```
+
+<br/>
+
+<!-- ============================================================ -->
+<!-- QUEST LOG / BOSS BATTLES -->
+<!-- ============================================================ -->
+## 📜 Quest Log — Boss Battles Defeated
+
+<details open>
+<summary><b>🐉 Boss: "IQsight Mega-Menu" — Bacancy Technology (Mar 2026 – Present)</b></summary>
+<br/>
+
+> **Difficulty:** ⭐⭐⭐⭐ · **Status:** ✅ In Progress
+
+- Built a Storyblok CMS integration in Next.js with full story-lifecycle management
+- Engineered a pixel-perfect multi-level mega-menu — marketing team now edits nav with **zero engineering involvement**
+- Integrated Algolia search with custom indexing + faceted filtering
+- **Loot dropped:** `Headless CMS Mastery`, `ISR/SSR Architecture`, `Enterprise Nav Systems`
+
+</details>
 
 <details>
-<summary><b>📋 Full skill breakdown (click to expand)</b></summary>
+<summary><b>🐲 Boss: "The Monolith" — ESparkBiz Technologies (Apr 2025 – Mar 2026)</b></summary>
 <br/>
 
-| Category | Skills |
-|---|---|
-| **Frontend** | React.js, Next.js (SSR/ISR), Tailwind CSS, HTML5, CSS3 |
-| **Backend** | Node.js, Express.js, NestJS, TypeScript |
-| **Databases** | MongoDB, MySQL, Redis |
-| **CMS & Search** | Storyblok, Contentful, Algolia |
-| **APIs & Auth** | REST, GraphQL, OAuth, JWT, Firebase, Google OAuth, GitHub OAuth |
-| **Architecture & DevOps** | Microservices, Backend-for-Frontend, Clean Architecture, System Design, Docker, Git, Webpack, Agile/Scrum |
+> **Difficulty:** ⭐⭐⭐⭐⭐ · **Status:** ✅ Defeated
+
+- Split a legacy backend into a modular **NestJS microservices** platform
+- Architected a document-management & digital-signing system with audit trails
+- Led code reviews and mentored junior devs across Agile sprints
+- **Loot dropped:** `Team Lead XP +500`, `Microservices Architecture`, `Mentorship Badge`
+
+</details>
+
+<details>
+<summary><b>🐍 Boss: "Legacy Load-Time Hydra" — Krish Technolabs (Jan 2023 – Mar 2025)</b></summary>
+<br/>
+
+> **Difficulty:** ⭐⭐⭐ · **Status:** ✅ Defeated
+
+- Migrated legacy apps to Next.js → **~30% faster loads**
+- Built a Backend-for-Frontend layer for commercetools integrations
+- Custom Webpack strategy → **~25% smaller bundles**
+- Optimised MongoDB queries → **~40% performance gains**
+- **Loot dropped:** `Performance Optimization`, `BFF Pattern`, `OAuth Mastery`
+
+</details>
+
+<details>
+<summary><b>⚔️ Boss: "The Freelance Gauntlet" — Independent (2021 – 2023)</b></summary>
+<br/>
+
+> **Difficulty:** ⭐⭐⭐ · **Status:** ✅ Defeated
+
+- Built a scheduler app for Adda247's ed-tech platform
+- Shipped core modules for WNDY — auth, bidding system, real-time notifications
+- Ran full client engagements solo: requirements → architecture → delivery
+- **Loot dropped:** `End-to-End Ownership`, `Client Management`, `Solo-Carry Badge`
 
 </details>
 
 <br/>
 
 <!-- ============================================================ -->
-<!-- EXPERIENCE -->
+<!-- ACHIEVEMENTS -->
 <!-- ============================================================ -->
-## 💼 Professional Experience
-
-### Software Engineer – Full Stack (React + Node.js)
-**Bacancy Technology Pvt. Ltd.** · Ahmedabad, India (Remote-friendly) · *Mar 2026 – Present*
-- Building a **Storyblok CMS integration in Next.js**, leveraging the Management API for dynamic content modelling, component mapping, and full story lifecycle management for **IQsight** (formerly Bosch Video Systems)
-- Engineered a **pixel-perfect, multi-level mega-menu** navigation system in Next.js driven by Storyblok, enabling the marketing team to manage complex site navigation with zero engineering involvement
-- Integrated **Algolia search** with custom indexing pipelines, faceted filtering, and an instant-search UI, improving content discoverability
-- Built a headless content-delivery layer with **Next.js ISR/SSR**, enabling editors to publish independently of engineering release cycles
-- Partnered with the product team to align component architecture with brand guidelines and performance SLAs
-
-### Software Engineer – Team Lead
-**ESparkBiz Technologies Pvt. Ltd.** · Ahmedabad, India · *Apr 2025 – Mar 2026*
-- Designed and led development of a **modular backend platform** using NestJS and a microservices architecture, improving scalability and service isolation
-- Developed and maintained RESTful APIs consumed by React.js frontends, ensuring secure and efficient data exchange
-- Architected a **document-management and digital-signing system** with workflow automation, audit trails, and secure file verification
-- Ran code reviews, mentored junior developers, and enforced clean-architecture standards across Agile sprints
-
-### Software Engineer
-**Krish Technolabs Pvt. Ltd.** · Ahmedabad, India · *Jan 2023 – Mar 2025*
-- Migrated legacy applications to **Next.js**, improving SEO and reducing initial load times by **~30%**
-- Built a **Backend-for-Frontend (BFF)** layer using Node.js and TypeScript for commercetools integrations
-- Developed a custom **Webpack** bundling strategy that reduced bundle size by **~25%**
-- Optimised **MongoDB** queries via indexing and aggregation pipelines for up to **40%** performance gains
-- Implemented secure **OAuth-based authentication** with Firebase, Google, and GitHub
-
-### Independent Software Developer (Freelance)
-**Remote** · *2021 – 2023*
-- Built an internal **scheduler application** for Adda247 to support course scheduling for their ed-tech platform
-- Developed core modules for **WNDY**, a waste-management marketplace app — authentication, bidding system, image capture for listings, real-time notifications
-- Worked directly with clients across full engagements: requirements, architecture, and end-to-end delivery
-
-<br/>
-
-<!-- ============================================================ -->
-<!-- PROJECTS -->
-<!-- ============================================================ -->
-## 🧪 Independent Projects
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### 🧱 Dynamic Page Builder
-Low-code builder for non-technical editors.
-**Stack:** Contentful · Next.js · SSR
-
-- Server-side rendering & caching
-- Image optimisation pipeline
-- Reusable UI component library
-
-</td>
-<td width="33%" valign="top">
-
-### 🛒 E-Commerce Platform
-Full-featured commerce backend.
-**Stack:** Node.js · TypeScript · Express · MongoDB
-
-- Role-based access control (RBAC)
-- Secure authentication
-- Scalable product/order/user APIs
-- Optimised database indexing
-
-</td>
-<td width="33%" valign="top">
-
-### 🎓 Faculty & Course Portal
-Academic management platform.
-**Stack:** React · Node.js
-
-- Role-based workflows (admin/faculty)
-- Analytics dashboards
-- Lecture tracking & progress auditing
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-<!-- ============================================================ -->
-<!-- CERTS & EDUCATION -->
-<!-- ============================================================ -->
-## 🎓 Education & Certifications
-
-**B.E., Information Technology** — Gujarat Technological University · CGPA 8.65/10 · Graduated 2023
+## 🏆 Achievements Unlocked
 
 <p>
-  <img src="https://img.shields.io/badge/MongoDB%20Node.js%20Developer-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
-  <img src="https://img.shields.io/badge/AWS%20Cloud%20101-FF9900?style=flat-square&logo=amazonaws&logoColor=white"/>
-  <img src="https://img.shields.io/badge/HackerRank%20-%20React.js%20%2F%20JavaScript-2EC866?style=flat-square&logo=hackerrank&logoColor=white"/>
+  <img src="https://img.shields.io/badge/🏅-B.E.%20Information%20Technology%20(8.65%20CGPA)-2C5364?style=for-the-badge"/>
+</p>
+<p>
+  <img src="https://img.shields.io/badge/🎖️-MongoDB%20Node.js%20Developer-47A248?style=for-the-badge&logo=mongodb&logoColor=white"/>
+  <img src="https://img.shields.io/badge/🎖️-AWS%20Cloud%20101-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white"/>
+  <img src="https://img.shields.io/badge/🎖️-HackerRank%20React%2FJS-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white"/>
 </p>
 
 <br/>
 
 <!-- ============================================================ -->
-<!-- GITHUB STATS -->
+<!-- INVENTORY / PROJECTS -->
 <!-- ============================================================ -->
-## 📊 GitHub Stats
+## 🎒 Inventory (Independent Projects)
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=varun-sh02&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=varun-sh02&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=varun-sh02&theme=tokyonight&hide_border=true" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=varun-sh02&theme=tokyonight&no-frame=true&row=1&column=6" />
-</p>
-
-> ⚠️ Replace `YOUR_GITHUB_USERNAME` in the section above with your actual GitHub username for these widgets to render.
+| Item | Type | Stats |
+|---|---|---|
+| 🧱 **Dynamic Page Builder** | Legendary Low-Code Artifact | Contentful · Next.js · SSR · Image Optimization |
+| 🛒 **E-Commerce Platform** | Epic Backend Weapon | Node.js · TypeScript · RBAC · Scalable APIs |
+| 🎓 **Faculty & Course Portal** | Rare Utility Tool | React · Node.js · Analytics Dashboards |
 
 <br/>
 
 <!-- ============================================================ -->
-<!-- FOOTER -->
+<!-- LIVE GITHUB SNAKE GAME -->
 <!-- ============================================================ -->
+## 🐍 The Snake Eats My Contributions
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2C5364,100:0F2027&height=120&section=footer"/>
+  <img src="https://raw.githubusercontent.com/varun-sh02/varun-sh02/output/github-contribution-grid-snake.svg" alt="github contribution snake game" />
 </p>
 
-<p align="center"><i>⭐️ Thanks for stopping by — always happy to connect and talk about React, Next.js, or system design.</i></p>
+> This snake is **alive** — a GitHub Action replays it daily, literally eating my contribution graph.
+> Setup workflow is in the collapsible below (takes 2 minutes, and almost nobody has this on their profile).
+
+<details>
+<summary><b>⚙️ How to activate the snake (copy-paste workflow)</b></summary>
+<br/>
+
+Create `.github/workflows/snake.yml` in your `varun-sh02/varun-sh02` repo:
+
+```yaml
+name: Generate Snake
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk@v3
+        id: snake
+        with:
+          github_user_name: varun-sh02
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+Push it once, let the Action run, and the SVG above will animate for real on your profile.
+
+</details>
+
+<br/>
+
+<!-- ============================================================ -->
+<!-- STATS DASHBOARD -->
+<!-- ============================================================ -->
+## 📊 Player Stats
+
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=varun-sh02&show_icons=true&theme=radical&hide_border=true&count_private=true&title_color=39FF14&icon_color=39FF14" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=varun-sh02&layout=compact&theme=radical&hide_border=true&title_color=39FF14" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=varun-sh02&theme=radical&hide_border=true&ring=39FF14&fire=39FF14" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=varun-sh02&theme=radical&no-frame=true&row=1&column=6" />
+</p>
+
+<br/>
+
+<!-- ============================================================ -->
+<!-- SECRET / EASTER EGG -->
+<!-- ============================================================ -->
+<details>
+<summary>🕹️ <b>Konami code found this? Here's the secret debug menu.</b></summary>
+<br/>
+
+```
+> sudo whoami
+varun — turns "it works on my machine" into "it works in production"
+
+> cat todo.txt
+[ ] Ship the next mega-menu edge case
+[ ] Reply to that recruiter (probably you)
+[x] Make this README weirder than the last one
+```
+
+</details>
+
+<br/>
+
+<!-- ============================================================ -->
+<!-- CONTACT -->
+<!-- ============================================================ -->
+## 📡 Send a Signal
+
+<p align="center">
+  <a href="mailto:varunshah02@icloud.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://linkedin.com/in/varun-shah-3a3b8a23b"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  <a href="tel:+918238960631"><img src="https://img.shields.io/badge/Call-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Thanks+for+reading+this+far.;Now+go+hire+me+or+hit+the+follow+button.&font=Fira+Code&center=true&width=500&height=30&duration=2500&color=39FF14&background=0D1117&vCenter=true&size=16" />
+</p>
