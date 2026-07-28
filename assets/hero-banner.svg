@@ -34,10 +34,6 @@
   </g>
 
   <!-- floating code particles -->
-  <g font-family="ui-monospace, monospace" font-size="22" fill="#1F9C0C" opacity="0.35">
-    <text x="80" y="280">&lt;/&gt;</text>
-    <animateTransform xlink:href="#p1" attributeName="transform" type="translate" values="0,0; 0,-260" dur="9s" repeatCount="indefinite"/>
-  </g>
   <text id="p1" x="80" y="300" font-family="ui-monospace, monospace" font-size="22" fill="#39FF14" opacity="0.3">&lt;/&gt;
     <animateTransform attributeName="transform" type="translate" values="0,0; 0,-320" dur="9s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0;0.4;0.4;0" keyTimes="0;0.1;0.8;1" dur="9s" repeatCount="indefinite"/>
