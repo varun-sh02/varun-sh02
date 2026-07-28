@@ -1,0 +1,19 @@
+<svg width="1200" height="160" viewBox="0 0 1200 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1F2E"/>
+      <stop offset="100%" stop-color="#05070A"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9D1D9"/>
+      <stop offset="45%" stop-color="#C9D1D9"/>
+      <stop offset="50%" stop-color="#00E5FF"/>
+      <stop offset="55%" stop-color="#C9D1D9"/>
+      <stop offset="100%" stop-color="#C9D1D9">
+      </stop>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-1.2,0; 1.2,0" dur="3s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="160" fill="url(#fbg)"/>
+  <text x="600" y="90" text-anchor="middle" font-family="ui-monospace, monospace" font-size="34" font-weight="700" fill="url(#shimmer)">Let's build something that ships</text>
+</svg>
