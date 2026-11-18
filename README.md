@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&height=230&color=0:04150F,60:064E3B,100:10B981&text=Varun%20Shah&fontColor=ECFDF5&fontSize=54&fontAlignY=44&desc=Senior%20Full-Stack%20Engineer%20%C2%B7%20Ahmedabad%2C%20India&descAlignY=64&descSize=15&descColor=A7F3D0&stroke=34D399&strokeWidth=2&animation=fadeIn" alt="Varun Shah" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=0:022C22,55:065F46,100:10B981&text=Varun%20Shah&fontColor=FFFFFF&fontSize=54&fontAlignY=38&desc=Senior%20Full-Stack%20Engineer%20%C2%B7%20Ahmedabad%2C%20India&descAlignY=58&descSize=16&descColor=D1FAE5" alt="Varun Shah" width="100%" />
 
 </div>
 
